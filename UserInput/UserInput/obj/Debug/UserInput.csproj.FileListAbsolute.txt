@@ -1,0 +1,8 @@
+C:\Users\ACT-STUDENT\Desktop\New folder\UserInput\UserInput\bin\Debug\UserInput.exe.config
+C:\Users\ACT-STUDENT\Desktop\New folder\UserInput\UserInput\bin\Debug\UserInput.exe
+C:\Users\ACT-STUDENT\Desktop\New folder\UserInput\UserInput\bin\Debug\UserInput.pdb
+C:\Users\ACT-STUDENT\Desktop\New folder\UserInput\UserInput\obj\Debug\UserInput.csproj.AssemblyReference.cache
+C:\Users\ACT-STUDENT\Desktop\New folder\UserInput\UserInput\obj\Debug\UserInput.csproj.CoreCompileInputs.cache
+C:\Users\ACT-STUDENT\Desktop\New folder\UserInput\UserInput\obj\Debug\UserInput.exe
+C:\Users\ACT-STUDENT\Desktop\New folder\UserInput\UserInput\obj\Debug\UserInput.pdb
+C:\Users\ACT-STUDENT\Desktop\New folder\UserInput\UserInput\obj\Debug\UserInput.exe.config
