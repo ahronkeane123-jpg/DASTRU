@@ -46,6 +46,28 @@ namespace Act7
                 Console.ReadKey();
                 goto inputValue;
             }
+             Console.WriteLine("---Enter the name of the favourite friends you have in your entire life---");
+             // Loop to get each friend's name
+            for (int i = 0; i < numofFriends; i++)
+            {
+            Console.Write("Favourite friends #{0}: ", i + 1);
+        string friendName = Console.ReadLine();
+        // Add this friend's name to the LinkedList
+        myFriends.AddLast(friendName);
+    }
+    // Convert the LinkedList to an array so we can sort it alphabetically
+    string[] friendArray = myFriends.ToArray();
+    Array.Sort(friendArray);
+    myFriends = new LinkedList<string>(friendArray);
+
+    Console.Clear();
+    Console.WriteLine("\n----This is your favourite friends in your life---- ");
+    foreach(string friend in myFriends)
+    {
+        Console.WriteLine(friend);
+    }
+    Console.ReadKey();
+
         }
     }
 }
