@@ -10,52 +10,88 @@ namespace Linked_List_in_OOP
     {
         static void Main(string[] args)
         {
+            // Create something to manage all the heroes
+            HeroManager manager = new HeroManager();
+
+            // This will store the option the user picks from the menu
+            int choice;
+
+            // Keep running the program until the user decides to exit
+            do
             {
-                // Create something to manage all the heroes
-                HeroManager manager = new HeroManager();
+                // Display menu and get user choice
+                choice = UserInput.ShowMenu();
 
-                // This will store the option the user picks from the menu
-                int choice;
-
-                // Keep running the program until the user decides to exit
-                do
+                // Check what the user selected
+                switch (choice)
                 {
-                    // Display menu and get user choice
-                    choice = UserInput.ShowMenu();
-
-                    // Check what the user selected
-                    switch (choice)
-                    {
-                        case 1:
-                            // Get hero details and insert hero
+                    case 1:
+                        // Get hero details and insert hero
+                        try
+                        {
                             Hero hero = UserInput.GetHeroDetails();
                             manager.InsertHero(hero);
-                            break;
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine("Error adding hero: " + ex.Message);
+                        }
+                        break;
 
-                        case 2:
-                            // Ask for hero ID to remove
+                    case 2:
+                        // Ask for hero ID to remove
+                        try
+                        {
                             Console.Write("Enter Hero ID to remove: ");
                             int id = int.Parse(Console.ReadLine());
                             manager.RemoveHero(id);
-                            break;
+                        }
+                        catch (FormatException)
+                        {
+                            Console.WriteLine("Invalid input. Please enter a numeric ID.");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine("Error removing hero: " + ex.Message);
+                        }
+                        break;
 
-                        case 3:
-                            // Display all heroes
+                    case 3:
+                        // Display all heroes
+                        try
+                        {
                             manager.DisplayHeroes();
-                            break;
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine("Error displaying heroes: " + ex.Message);
+                        }
+                        break;
 
-                        case 4:
-                            // Exit the program
+                    case 4:
+                        // Exit the program
+                        try
+                        {
                             Console.WriteLine("Program exited.");
-                            break;
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine("Unexpected error: " + ex.Message);
+                        }
+                        break;
 
-                        default:
-                            Console.WriteLine("Invalid choice. Try again.");
-                            break;
-                    }
 
-                } while (choice != 4);
-            }
+                    default:
+                        Console.WriteLine("Invalid choice. Try again.");
+                        break;
+                }
+
+            } while (choice != 4);
         }
     }
 }
+
+            
+        
+    
+
